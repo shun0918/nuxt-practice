@@ -7,5 +7,4 @@ ENV TZ Asia/Tokyo
 WORKDIR /usr/src/app
 
 
-# RUN npm install -g create-next-app
-# RUN npm install -g create-next-app
+RUN npm install -g create-nuxt-app
