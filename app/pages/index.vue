@@ -2,18 +2,22 @@
   <div>
     <NuxtLink to="/test">test</NuxtLink>  
     <h1>Hello world!!</h1>
-    <Index />
+    <!-- <Index /> -->
   </div>
 
 </template>
 
-<script>
-import Index from "~/components/templates/Index"
-export default {
+<script lang="ts">
+//import Index from "~/components/templates/Index"
+import {defineComponent, useMeta } from '@nuxtjs/composition-api';
+export default defineComponent({
   components: {
-    Index
+    // Index
   },
+  head: {},
   setup() {
+    const { title } = useMeta();
+    title.value = 'Nuxt TS Composition API !!!!!!!';
   },
-}
+})
 </script>
